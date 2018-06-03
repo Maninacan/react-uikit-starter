@@ -1,0 +1,23 @@
+{
+  "name": "react-uikit-starter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass-chokidar": "^1.3.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4",
+    "uikit": "^3.0.0-rc.4"
+  },
+  "scripts": {
+    "fonts:choose": "npx fontello-cli open --config fontello.config.json",
+    "fonts:install": "npx fontello-cli --config fontello.config.json --css src/assets/fontello/css/ --font src/assets/fontello/font/ install",
+    "css:build": "node-sass-chokidar src/ -o src/",
+    "css:watch": "npm run css:build && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "prestart": "npm run css:build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
